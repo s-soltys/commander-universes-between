@@ -13,6 +13,13 @@ bundle install
 rails db:setup
 ```
 
+Set API credentials (either environment variables or Rails credentials):
+
+```bash
+export OPENAI_API_KEY="..."
+export SCRYFALL_USER_AGENT="commander-universes-between/1.0"
+```
+
 ## Run
 
 ```bash

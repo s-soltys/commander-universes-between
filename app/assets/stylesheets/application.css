@@ -1,10 +1,90 @@
-/*
- * This is a manifest file that'll be compiled into application.css.
- *
- * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
- * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
- * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
- * depending on specificity.
- *
- * Consider organizing styles into separate files for maintainability.
- */
+@import "application.tailwind.css";
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #ecf4ff 0%, #f7f4eb 50%, #ffffff 100%);
+  color: #12263a;
+}
+
+.container {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #d7e2ee;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 10px 24px rgba(18, 38, 58, 0.08);
+}
+
+input,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #b7c7d8;
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  font: inherit;
+}
+
+textarea {
+  min-height: 16rem;
+}
+
+button,
+.button {
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: #1f7a8c;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button:hover,
+.button:hover {
+  background: #155d6b;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid.two {
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.error {
+  color: #9e2a2b;
+}
+
+.muted {
+  color: #4f6476;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  background: #d7ecf7;
+  color: #0f3f4f;
+}
+
+.badge.partial {
+  background: #fcefd0;
+  color: #8a5b00;
+}
+
+.badge.failed {
+  background: #f8d7da;
+  color: #7f1d1d;
+}

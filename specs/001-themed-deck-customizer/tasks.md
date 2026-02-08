@@ -15,9 +15,9 @@
 **Purpose**: Project initialization and basic structure
 
 - [x] T001 Initialize Rails app at repository root (creates `Gemfile`, `config/application.rb`)
-- [ ] T002 [P] Configure Tailwind CSS integration in `config/tailwind.config.js` and `app/assets/stylesheets/application.tailwind.css`
-- [ ] T003 [P] Add environment configuration for API keys in `config/credentials.yml.enc` and `config/master.key`
-- [ ] T004 [P] Add initial routes file with placeholders in `config/routes.rb`
+- [x] T002 [P] Configure Tailwind CSS integration in `config/tailwind.config.js` and `app/assets/stylesheets/application.tailwind.css`
+- [x] T003 [P] Add environment configuration for API keys in `config/credentials.yml.enc` and `config/master.key`
+- [x] T004 [P] Add initial routes file with placeholders in `config/routes.rb`
 
 ---
 
@@ -25,16 +25,16 @@
 
 **Purpose**: Core infrastructure that MUST be complete before ANY user story can be implemented
 
-- [ ] T005 Create Deck models and migrations in `app/models/deck.rb` and `db/migrate/XXXXXXXXXXXXXX_create_decks.rb`
-- [ ] T006 [P] Create DeckCard models and migrations in `app/models/deck_card.rb` and `db/migrate/XXXXXXXXXXXXXX_create_deck_cards.rb`
-- [ ] T007 [P] Create DeckError models and migrations in `app/models/deck_error.rb` and `db/migrate/XXXXXXXXXXXXXX_create_deck_errors.rb`
-- [ ] T008 Add validations and associations in `app/models/deck.rb`, `app/models/deck_card.rb`, `app/models/deck_error.rb`
-- [ ] T009 Create service layer base in `app/services/`
-- [ ] T010 [P] Add Scryfall client wrapper in `app/services/scryfall_client.rb`
-- [ ] T011 [P] Add OpenAI client wrapper in `app/services/openai_client.rb`
-- [ ] T012 Add deck parsing utility in `app/services/deck_list_parser.rb`
-- [ ] T013 Add generator service orchestration in `app/services/deck_generator.rb`
-- [ ] T014 Add shared error formatter in `app/services/deck_error_builder.rb`
+- [x] T005 Create Deck models and migrations in `app/models/deck.rb` and `db/migrate/XXXXXXXXXXXXXX_create_decks.rb`
+- [x] T006 [P] Create DeckCard models and migrations in `app/models/deck_card.rb` and `db/migrate/XXXXXXXXXXXXXX_create_deck_cards.rb`
+- [x] T007 [P] Create DeckError models and migrations in `app/models/deck_error.rb` and `db/migrate/XXXXXXXXXXXXXX_create_deck_errors.rb`
+- [x] T008 Add validations and associations in `app/models/deck.rb`, `app/models/deck_card.rb`, `app/models/deck_error.rb`
+- [x] T009 Create service layer base in `app/services/`
+- [x] T010 [P] Add Scryfall client wrapper in `app/services/scryfall_client.rb`
+- [x] T011 [P] Add OpenAI client wrapper in `app/services/openai_client.rb`
+- [x] T012 Add deck parsing utility in `app/services/deck_list_parser.rb`
+- [x] T013 Add generator service orchestration in `app/services/deck_generator.rb`
+- [x] T014 Add shared error formatter in `app/services/deck_error_builder.rb`
 
 **Checkpoint**: Foundation ready - user story implementation can now begin
 
@@ -48,15 +48,15 @@
 
 ### Implementation for User Story 1
 
-- [ ] T015 [US1] Implement deck creation controller action in `app/controllers/decks_controller.rb`
-- [ ] T016 [US1] Implement public deck show action in `app/controllers/decks_controller.rb`
-- [ ] T017 [US1] Wire POST/GET routes in `config/routes.rb`
-- [ ] T018 [P] [US1] Build deck submission form view in `app/views/decks/new.html.erb`
-- [ ] T019 [P] [US1] Build deck results view in `app/views/decks/show.html.erb`
-- [ ] T020 [US1] Implement share link generation in `app/services/deck_generator.rb`
-- [ ] T021 [US1] Implement card theming pipeline in `app/services/deck_generator.rb`
-- [ ] T022 [US1] Persist generated DeckCards in `app/services/deck_generator.rb`
-- [ ] T023 [US1] Map OpenAPI contract to controller responses in `app/controllers/decks_controller.rb`
+- [x] T015 [US1] Implement deck creation controller action in `app/controllers/decks_controller.rb`
+- [x] T016 [US1] Implement public deck show action in `app/controllers/decks_controller.rb`
+- [x] T017 [US1] Wire POST/GET routes in `config/routes.rb`
+- [x] T018 [P] [US1] Build deck submission form view in `app/views/decks/new.html.erb`
+- [x] T019 [P] [US1] Build deck results view in `app/views/decks/show.html.erb`
+- [x] T020 [US1] Implement share link generation in `app/services/deck_generator.rb`
+- [x] T021 [US1] Implement card theming pipeline in `app/services/deck_generator.rb`
+- [x] T022 [US1] Persist generated DeckCards in `app/services/deck_generator.rb`
+- [x] T023 [US1] Map OpenAPI contract to controller responses in `app/controllers/decks_controller.rb`
 
 **Checkpoint**: User Story 1 should be fully functional and independently testable
 
@@ -70,11 +70,11 @@
 
 ### Implementation for User Story 2
 
-- [ ] T024 [US2] Implement line-level parse validation in `app/services/deck_list_parser.rb`
-- [ ] T025 [US2] Populate DeckError records for unmatched lines in `app/services/deck_error_builder.rb`
-- [ ] T026 [US2] Update generator to mark status `partial` or `failed` in `app/services/deck_generator.rb`
-- [ ] T027 [US2] Render error list in `app/views/decks/show.html.erb`
-- [ ] T028 [US2] Return errors in API response payload in `app/controllers/decks_controller.rb`
+- [x] T024 [US2] Implement line-level parse validation in `app/services/deck_list_parser.rb`
+- [x] T025 [US2] Populate DeckError records for unmatched lines in `app/services/deck_error_builder.rb`
+- [x] T026 [US2] Update generator to mark status `partial` or `failed` in `app/services/deck_generator.rb`
+- [x] T027 [US2] Render error list in `app/views/decks/show.html.erb`
+- [x] T028 [US2] Return errors in API response payload in `app/controllers/decks_controller.rb`
 
 **Checkpoint**: User Story 2 should be functional and independently testable
 
@@ -84,10 +84,10 @@
 
 **Purpose**: Improvements that affect multiple user stories
 
-- [ ] T029 [P] Add basic layout and Tailwind styling in `app/views/layouts/application.html.erb`
-- [ ] T030 Add performance guardrails for Scryfall rate limit in `app/services/scryfall_client.rb`
-- [ ] T031 Add OpenAI error handling and retries in `app/services/openai_client.rb`
-- [ ] T032 Update `specs/001-themed-deck-customizer/quickstart.md` with any final setup details
+- [x] T029 [P] Add basic layout and Tailwind styling in `app/views/layouts/application.html.erb`
+- [x] T030 Add performance guardrails for Scryfall rate limit in `app/services/scryfall_client.rb`
+- [x] T031 Add OpenAI error handling and retries in `app/services/openai_client.rb`
+- [x] T032 Update `specs/001-themed-deck-customizer/quickstart.md` with any final setup details
 
 ---
 

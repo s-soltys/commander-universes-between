@@ -14,7 +14,7 @@
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Initialize Rails app at repository root (creates `Gemfile`, `config/application.rb`)
+- [x] T001 Initialize Rails app at repository root (creates `Gemfile`, `config/application.rb`)
 - [ ] T002 [P] Configure Tailwind CSS integration in `config/tailwind.config.js` and `app/assets/stylesheets/application.tailwind.css`
 - [ ] T003 [P] Add environment configuration for API keys in `config/credentials.yml.enc` and `config/master.key`
 - [ ] T004 [P] Add initial routes file with placeholders in `config/routes.rb`

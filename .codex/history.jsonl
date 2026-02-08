@@ -15,3 +15,6 @@
 {"session_id":"019c3cde-0c5d-7711-a182-e1bd16ddcbe8","ts":1770549110,"text":"let's ru the app"}
 {"session_id":"019c3cde-0c5d-7711-a182-e1bd16ddcbe8","ts":1770549151,"text":"do the smoke check"}
 {"session_id":"019c3cde-0c5d-7711-a182-e1bd16ddcbe8","ts":1770549268,"text":"I see this deck failed http://localhost:3000/decks/0amqnsfy7q"}
+{"session_id":"019c3cde-0c5d-7711-a182-e1bd16ddcbe8","ts":1770549460,"text":"how can I configure the public apis?"}
+{"session_id":"019c3cde-0c5d-7711-a182-e1bd16ddcbe8","ts":1770549494,"text":"can I instead use dotenv?"}
+{"session_id":"019c3cde-0c5d-7711-a182-e1bd16ddcbe8","ts":1770549514,"text":"do it for me, and create an example dotenv"}

@@ -10,7 +10,8 @@ class DeckGenerator < ApplicationService
     parsed = parser.call(input_text: deck.input_text)
     unmatched_cards = []
 
-    DeckErrorBuilder.call(deck: deck, parse_errors: parsed[:errors])
+    error_builder = DeckErrorBuilder.new(deck: deck)
+    error_builder.call(parse_errors: parsed[:errors])
 
     valid_cards = aggregate_cards(parsed[:cards])
     deck.deck_cards.destroy_all
@@ -40,7 +41,7 @@ class DeckGenerator < ApplicationService
       )
     end
 
-    DeckErrorBuilder.call(deck: deck, unmatched_cards: unmatched_cards)
+    error_builder.call(unmatched_cards: unmatched_cards)
 
     deck.share_slug = generate_share_slug if deck.share_slug.blank?
     deck.status = derive_status

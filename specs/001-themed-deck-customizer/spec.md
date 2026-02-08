@@ -5,6 +5,16 @@
 **Status**: Draft  
 **Input**: User description: "this is an app which allows me to customise a magic gathering commander deck in a way that similar to the official universe beyond commanders.the main user flow is I upload a deck list in a simple text format. I describe the team in the form of fantasy world sci-fi world or a movie or a book I tell who is my commander within this world then based on the provided information the app does the following for each card based on information from public resources such as scryfall the app generates a name of a themed version of this card and provides a description of how a team version of the card art should look like when generating those themed cards take into account the rules that you know that wizards of the coast takes into account when creating universe is beyond for example if its a legendary creature on the original car then it should be a named character in the in the themed version if its an artefact in endaural card, then"
 
+## Clarifications
+
+### Session 2026-02-08
+
+- Q: Should output be generated per input line or per unique card with quantities? → A: Generate one output per unique card and include quantity.
+- Q: How should the system behave when some card lines cannot be matched? → A: Generate results for matched cards and list unmatched lines as errors.
+- Q: Should users need accounts, and are generated decks public or private? → A: No user accounts; generated decks are public.
+- Q: What input format should be required for deck lists? → A: Quantity plus card name per line.
+- Q: How should public results be accessed after generation? → A: Public results get a shareable page link.
+
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 - Generate Themed Commander Deck (Priority: P1)
@@ -61,6 +71,11 @@ As a player, I want clear feedback when my deck list or commander details are in
   - Instants and sorceries map to actions, events, or effects consistent with the world.
 - **FR-006**: System MUST provide output that clearly links each themed card back to the original card name.
 - **FR-007**: System MUST report input errors with line-level feedback and allow resubmission after corrections.
+- **FR-008**: System MUST generate one themed output per unique card and include the total quantity for that card.
+- **FR-009**: System MUST generate results for matched cards even if some lines fail, and list unmatched lines as errors.
+- **FR-010**: System MUST allow generation without user accounts, and generated decks MUST be public by default.
+- **FR-011**: System MUST require deck lists in the format "quantity + card name" per line (e.g., "2 Lightning Bolt").
+- **FR-012**: System MUST provide a shareable public link for each generated deck output.
 
 ### Key Entities *(include if feature involves data)*
 
@@ -72,6 +87,7 @@ As a player, I want clear feedback when my deck list or commander details are in
 ## Assumptions
 
 - The input format follows common deck list conventions (one card per line with optional quantity).
+- The input format uses quantity plus card name per line.
 - The generation output focuses on themed names and art descriptions, not rules text changes.
 - Public card references provide at least card name and type information sufficient for theming.
 
